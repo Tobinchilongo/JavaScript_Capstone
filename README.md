@@ -7,9 +7,10 @@
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- JavaScript
+- Webpack
 
 ## Live Demo (if available)
 
@@ -18,14 +19,22 @@
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
 
+- clone the repository by running
+``` git clone https://github.com/Tobinchilongo/JavaScript_Capstone.git ```
+- navigate to the folder
+``` cd JavaScript_Capstone ```
+- Install packages
+``` npm install ```
+- Run the app
+``` npm start ```
+## Prerequisites
+- Linters
+- GitHub Flow
+- Javascript
 ### Setup
 
 ### Install
@@ -40,17 +49,19 @@ To get a local copy up and running follow these simple example steps.
 
 ## Authors
 
-👤 **Author1**
+👤 **Author 1: Tobin Chilongo Jnr**
+ 
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@Tobinchilongo](https://github.com/Tobinchilongo)
+- Twitter: [@Tobin_Official](https://twitter.com/Tobin_Official)
+- LinkedIn: [@Tobin Chilongo](https://www.linkedin.com/in/tobin-chilongo-a6736415a/)
 
-👤 **Author2**
+👤 **Author 2: Selma Belhadj**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@selma-belhadj](https://github.com/selma-belhadj)
+- Twitter: [@Bel_Selma16](https://twitter.com/Bel_Selma16)
+- LinkedIn: [@selma-belhadj](https://www.linkedin.com/in/selma-belhadj/)
+
 
 ## 🤝 Contributing
 
