@@ -1,13 +1,14 @@
-import _ from 'lodash';
 import './style.css';
+import getData from './modules/ApiData.js';
+import createCardItem from './modules/CardItem.js';
 
-function component() {
-  const element = document.createElement('div');
 
-  // Lodash, currently included via a script, is required for this line to work
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const renderItems = async () => {
+  const itemsData = await getData();
+  // eslint-disable-next-line no-plusplus
+  for (let i = 0; i < itemsData.length; i++) {
+    createCardItem(itemsData[i]);
+  }
+};
 
-  return element;
-}
-
-document.body.appendChild(component());
+renderItems();
