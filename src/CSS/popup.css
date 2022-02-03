@@ -10,13 +10,13 @@
   overflow: auto;
   margin: 5% auto;
   padding: 4rem;
-  width:fit-content ;
+  width: fit-content;
   flex-direction: column;
   border-radius: 0.7rem;
 }
 
 h2 {
-  margin-left: 0px;
+  margin-left: 0;
   padding-top: 30px;
 }
 
@@ -32,7 +32,7 @@ h2 {
   text-align: left;
 }
 
-.movie-popup table tr  {
+.movie-popup table tr {
   border-radius: 3px;
   padding: 10px 10px;
   display: flex;
@@ -41,16 +41,18 @@ h2 {
 }
 
 .table-row {
-  background-color: #ffffff;
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .col-1 {
   flex-basis: 75%;
 }
+
 .col-2 {
   flex-basis: 25%;
 }
+
 .popup-img {
   display: block;
   margin: 0 auto;
@@ -65,7 +67,8 @@ h2 {
   border-radius: 0.7rem;
   margin-top: 1rem;
   overflow: auto;
-  background-color: #bfc9c2;
+  background-color: #031406;
+  color: #fff;
 }
 
 .comment-title {
@@ -73,8 +76,18 @@ h2 {
   padding-top: 30px;
 }
 
-.comments-list{
-  padding: 0.5rem;
+.comments-list {
+  padding: 0.3rem;
+}
+
+.comments-list small {
+  opacity: 0.6;
+}
+
+.comments-list span {
+  color: #08871b;
+  text-decoration: underline;
+  margin-right: 0.2rem;
 }
 
 #close-popup {
@@ -84,7 +97,11 @@ h2 {
   cursor: pointer;
   font-size: 20px;
   font-weight: 900;
-  padding: -40px 0px 0 0; 
+  padding: -40px 0 0 0;
+}
+
+#close-popup:hover {
+  color: red;
 }
 
 .com-form {
@@ -106,8 +123,17 @@ h2 {
 }
 
 .com-form button {
-  box-shadow: 2px 2px 4px 0;
+  border: 2px solid black;
+  padding: 0.4em;
+  font-family: var(--main-font);
+  font-weight: bold;
+  color: black;
   cursor: pointer;
+  background-color: transparent;
+}
+
+.com-form button:hover {
+  transform: scale(0.98);
 }
 
 .com-form textarea {

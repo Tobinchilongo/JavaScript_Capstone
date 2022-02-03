@@ -40,7 +40,7 @@ const showComments = (movieId) => {
     if (!data.error) {
       let comments = '';
       data.forEach((comment) => {
-        comments += `<li class="comments-list">${comment.creation_date} ${comment.username}: ${comment.comment}</li>`;
+        comments += `<li class="comments-list"> <small> ${comment.creation_date} </small>  <span> | ${comment.username}</span> "${comment.comment}" </li>`;
       });
       displayMovieComments(comments);
     } else {
