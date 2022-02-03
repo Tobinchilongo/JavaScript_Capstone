@@ -1,6 +1,8 @@
-import './style.css';
+import './CSS/style.css';
+import './CSS/popup.css';
 import getData from './modules/ApiData.js';
 import createCardItem from './modules/CardItem.js';
+import enableComments from './modules/popup.js';
 
 const renderItems = async () => {
   const itemsData = await getData();
@@ -8,4 +10,6 @@ const renderItems = async () => {
   for (let i = 0; i < itemsData.length; i++) {
     createCardItem(itemsData[i]);
   }
-};
+
+renderItems().then(() => {
+  enableComments();
