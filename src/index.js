@@ -2,8 +2,6 @@ import './style.css';
 import getData from './modules/ApiData.js';
 import createCardItem from './modules/CardItem.js';
 
-// const movieIdd = 139;
-
 const renderItems = async () => {
   const itemsData = await getData();
   // eslint-disable-next-line no-plusplus
@@ -11,5 +9,3 @@ const renderItems = async () => {
     createCardItem(itemsData[i]);
   }
 };
-
-renderItems();
