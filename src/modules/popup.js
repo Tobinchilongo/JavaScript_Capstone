@@ -40,7 +40,7 @@ const showComments = (movieId) => {
     if (!data.error) {
       let comments = '';
       data.forEach((comment) => {
-        comments += `<li>${comment.creation_date} ${comment.username}: ${comment.comment}</li>`;
+        comments += `<li class="comments-list"> <small> ${comment.creation_date} </small>  <span> | ${comment.username}</span> "${comment.comment}" </li>`;
       });
       displayMovieComments(comments);
     } else {
@@ -65,20 +65,24 @@ const displayMoviePopup = (movieId) => {
     <img src="${data.image.medium}" class="popup-img">
     <h3 class="popup-title">${data.name}</h3>
     <table>
-      <tr>
-        <td>
-          <b>premiered:</b> ${data.premiered}
+      <tr class="table-row">
+        <td class="col col-1">
+          <b >Premiered</b> </td> <td class="col col-2">${data.premiered}
         </td>
+        </tr>
+        <tr class="table-row">
         <td>
-          <b>Ended:</b> ${data.ended}
+          <b>Ended</b></td> <td class="col col-2"> ${data.ended}
         </td>
       </tr>
-      <tr>
+      <tr class="table-row">
         <td>
-          <b>Language:</b> ${data.language}
+          <b>Language</b></td> <td class="col col-2"> ${data.language}
         </td>
+        </tr>
+        <tr class="table-row">
         <td>
-          <b>Type:</b> ${data.type}
+          <b>Type</b> </td> <td class="col col-2"> ${data.type}
         </td>
       </tr>
     </table>
