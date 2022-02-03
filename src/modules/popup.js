@@ -1,5 +1,6 @@
 import fetchMovieComments from './commentsDetails.js';
 
+const commentsEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EXmby9I6BhLpYqOc41Bj/comments';
 const url1 = 'https://api.tvmaze.com/shows';
 const popup = document.querySelector('.movie-popup');
 
@@ -7,6 +8,23 @@ const get = (url) => fetch(url)
   .then((res) => res.json())
   .then((data) => data)
   .catch((error) => error);
+
+const post = (url, params = {}) => fetch(url, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(params),
+}).then((res) => res.text())
+  .then((data) => (data.error
+    ? { error: true, info: data }
+    : { error: false, info: data }))
+  .catch((error) => ({ error: true, info: error }));
+
+const addComment = async (params) => {
+  const response = await post(commentsEndpoint, params);
+  return response;
+};
 
 const fetchMovieData = async (movieId) => {
   const response = await get(`${url1}/${movieId}`);
@@ -70,11 +88,33 @@ const displayMoviePopup = (movieId) => {
     <ul class="comments">
       fetching comments...
     </ul> 
+    <form class="com-form">
+      <h2>Add a comment</h2>
+      <input type="text" name="username" placeholder="Your name" required>
+      <textarea placeholder="Your insights" name="comment" required minlength="1"></textarea>
+      <button type="submit">Submit</button>
+    </form>
     `;
-    popup.style.display = 'block';
     enableClosePopup();
     showComments(movieId);
+
+    const form = popup.querySelector('.com-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const user = form.elements.username.value;
+      const msg = form.elements.comment.value;
+      addComment({
+        item_id: movieId,
+        username: user,
+        comment: msg,
+      }).then(() => {
+        showComments(movieId);
+        form.reset();
+      });
+    });
   });
+  popup.style.display = 'block';
+  enableClosePopup();
 };
 
 const enableComments = () => {
