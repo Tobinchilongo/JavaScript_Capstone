@@ -1,4 +1,4 @@
-import fetchMovieComments from './commentsDetails.js';
+import updateTotalCommentsCount, { fetchMovieComments } from './commentsDetails.js';
 
 const commentsEndpoint = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/EXmby9I6BhLpYqOc41Bj/comments';
 const url1 = 'https://api.tvmaze.com/shows';
@@ -109,6 +109,7 @@ const displayMoviePopup = (movieId) => {
         comment: msg,
       }).then(() => {
         showComments(movieId);
+        updateTotalCommentsCount(movieId);
         form.reset();
       });
     });
