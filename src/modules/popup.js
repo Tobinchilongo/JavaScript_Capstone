@@ -1,3 +1,5 @@
+import fetchMovieComments from './commentsDetails.js';
+
 const url1 = 'https://api.tvmaze.com/shows';
 const popup = document.querySelector('.movie-popup');
 
@@ -9,6 +11,24 @@ const get = (url) => fetch(url)
 const fetchMovieData = async (movieId) => {
   const response = await get(`${url1}/${movieId}`);
   return response;
+};
+
+const displayMovieComments = (data) => {
+  popup.querySelector('.comments').innerHTML = data;
+};
+
+const showComments = (movieId) => {
+  fetchMovieComments(movieId).then((data) => {
+    if (!data.error) {
+      let comments = '';
+      data.forEach((comment) => {
+        comments += `<li>${comment.creation_date} ${comment.username}: ${comment.comment}</li>`;
+      });
+      displayMovieComments(comments);
+    } else {
+      displayMovieComments('There is no comments posted yet for this movie.');
+    }
+  });
 };
 
 const enableClosePopup = () => {
@@ -43,10 +63,17 @@ const displayMoviePopup = (movieId) => {
           <b>Type:</b> ${data.type}
         </td>
       </tr>
-    </table> 
+    </table>
+    <h3 class="comment-title">
+    Comments (<span class="total-comments">0</span>)
+    </h3>
+    <ul class="comments">
+      fetching comments...
+    </ul> 
     `;
     popup.style.display = 'block';
     enableClosePopup();
+    showComments(movieId);
   });
 };
 
