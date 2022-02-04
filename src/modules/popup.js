@@ -53,6 +53,7 @@ const enableClosePopup = () => {
   document.querySelector('#close-popup').addEventListener('click', () => {
     popup.style.display = 'none';
     popup.innerHTML = '';
+    document.body.style.overflow = 'visible';
   });
 };
 
@@ -128,6 +129,7 @@ const enableComments = () => {
     movie.addEventListener('click', () => {
       const movieId = movie.getAttribute('movie_id');
       displayMoviePopup(movieId);
+      document.body.style.overflow = 'hidden';
     });
   });
 };
