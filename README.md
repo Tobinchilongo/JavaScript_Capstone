@@ -18,7 +18,7 @@
 [Live Demo Link](https://thecapstone-project-js.netlify.app/)
 
 ## Video Dem
-[Video Demo Link](https://www.loom.com/)
+[Video Demo Link](https://www.loom.com/share/1491c0c0ae6344cd9c4b67109e48676d)
 
 
 ## Getting Started
