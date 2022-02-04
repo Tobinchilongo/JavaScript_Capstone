@@ -52,6 +52,13 @@ footer {
   color: #fff;
 }
 
+.container-footer p{
+  width: 95%;
+  margin: auto;
+  color: #fff;
+  padding: 2% 0;
+}
+
 .grid-cards-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
