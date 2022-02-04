@@ -3,6 +3,13 @@ import './CSS/popup.css';
 import getData, { getLikes } from './modules/ApiData.js';
 import createCardItem from './modules/CardItem.js';
 import enableComments from './modules/popup.js';
+import logo from './images/Screenshot.png';
+
+const logoImg = new Image();
+logoImg.src = logo;
+logoImg.alt = 'logo';
+logoImg.classList.add('logo');
+document.querySelector('.link-logo').append(logoImg);
 
 const renderItems = async () => {
   let index = 0;

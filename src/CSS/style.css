@@ -119,28 +119,12 @@ footer {
 }
 
 .logo {
-  height: 50px;
-  width: 150px;
+  height: 100px;
+  width: 220px;
 }
 
 .link-logo {
   text-decoration: none;
-}
-
-.loading {
-  width: 160px;
-  height: 160px;
-  border-radius: 150px;
-  border: 15px solid red;
-  border-top-color: rgba(0, 0, 0, 0.3);
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -80px;
-  margin-left: -80px;
-  animation: loading 1.2s linear infinite;
-  z-index: 999999999;
 }
 
 @keyframes loading {
