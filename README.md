@@ -3,9 +3,7 @@
 # The Capstone Project JS 
 
 
-> Description the project.
-This Webapp **The Cenima of Movies** displays a list of shows. The user is able to like any of the movies, and also read more information about each movie once he clicks on the "comments" button. Also, the user is able to leave a comment about any of the movies.
-
+> This Webapp **The Cenima of Movies** displays a list of shows. The user is able to like any of the movies, and also read more information about each movie once he clicks on the "comments" button. Also, the user is able to leave a comment about any of the movies.
 
 ![screenshot](./src/images/cenimaofmovies_screenshot.png)
 ## Built With
