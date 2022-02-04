@@ -1,10 +1,13 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# The Capstone Project JS
+# The Capstone Project JS 
+
 
 > Description the project.
+This Webapp **The Cenima of Movies** displays a list of shows. The user is able to like any of the movies, and also read more information about each movie once he clicks on the "comments" button. Also, the user is able to leave a comment about any of the movies.
 
 
+![screenshot](./src/images/cenimaofmovies_screenshot.png)
 ## Built With
 
 - HTML
@@ -12,9 +15,12 @@
 - JavaScript
 - Webpack
 
-## Live Demo (if available)
+## Live Demo 
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://thecapstone-project-js.netlify.app/)
+
+## Video Dem
+[Video Demo Link](https://www.loom.com/)
 
 
 ## Getting Started
@@ -35,17 +41,11 @@ To get a local copy up and running follow these simple example steps.
 - Linters
 - GitHub Flow
 - Javascript
-### Setup
-
-### Install
-
-### Usage
-
+- WEBPACK
+- Jest
 ### Run tests
-
-### Deployment
-
-
+Run the test 
+`npm run test`
 
 ## Authors
 
@@ -62,7 +62,6 @@ To get a local copy up and running follow these simple example steps.
 - Twitter: [@Bel_Selma16](https://twitter.com/Bel_Selma16)
 - LinkedIn: [@selma-belhadj](https://www.linkedin.com/in/selma-belhadj/)
 
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
@@ -73,11 +72,6 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
 
 ## 📝 License
 
