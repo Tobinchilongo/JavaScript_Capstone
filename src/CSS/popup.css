@@ -1,0 +1,145 @@
+.movie-popup {
+  display: none;
+  background: #fff;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  margin: 5% auto;
+  padding: 4rem;
+  width: fit-content;
+  flex-direction: column;
+  border-radius: 0.7rem;
+}
+
+h2 {
+  margin-left: 0;
+  padding-top: 30px;
+}
+
+.movie-popup .popup-title {
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.movie-popup table {
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.movie-popup table tr {
+  border-radius: 3px;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.table-row {
+  background-color: #fff;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.col-1 {
+  flex-basis: 75%;
+}
+
+.col-2 {
+  flex-basis: 25%;
+}
+
+.popup-img {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.comments {
+  margin-left: 90px;
+  list-style-type: none;
+  max-height: 200px;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+  overflow: auto;
+  background-color: #031406;
+  color: #fff;
+}
+
+.comment-title {
+  margin-left: 90px;
+  padding-top: 30px;
+}
+
+.comments-list {
+  padding: 0.3rem;
+}
+
+.comments-list small {
+  opacity: 0.6;
+}
+
+.comments-list span {
+  color: #08871b;
+  text-decoration: underline;
+  margin-right: 0.2rem;
+}
+
+#close-popup {
+  display: block;
+  width: 100%;
+  text-align: right;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 900;
+  padding: -40px 0 0 0;
+}
+
+#close-popup:hover {
+  color: red;
+}
+
+.com-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 20px;
+  margin-left: 90px;
+  margin-top: 3rem;
+}
+
+.com-form input,
+.com-form button {
+  width: 100%;
+  border: 1px solid #000;
+  height: 35px;
+  padding-left: 10px;
+  outline: none;
+}
+
+.com-form button {
+  border: 2px solid black;
+  padding: 0.4em;
+  font-family: var(--main-font);
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.com-form button:hover {
+  transform: scale(0.98);
+}
+
+.com-form textarea {
+  width: 400px;
+  height: 155px;
+  border: 1px solid #000;
+  outline: none;
+  padding: 5px;
+}
